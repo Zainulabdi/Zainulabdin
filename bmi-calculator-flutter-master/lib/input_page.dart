@@ -17,6 +17,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectGender;
+  int SliderHeight=180;
   // Color maleColor = deActiveColor;
  // Color feMalecolor = deActiveColor;
   //void updateColor(Gender gendertype) {
@@ -75,8 +76,41 @@ class _InputPageState extends State<InputPage> {
           )),
           Expanded(child:new RepeatContainerCode(colors: Color(0xFF1D1E33),
             cardwidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('HEIGHT',style: kLabelStyle,),
+                Text('HEIGHT',style: kLabelStyle,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    Text(
+                      SliderHeight.toString(),
+                      style: kNumberstyle,
+
+                    ),
+                    Text(
+                      'cm',
+                      style: kLabelStyle,
+                    ),
+
+
+
+                  ],
+                ),
+                Slider(
+                  value: SliderHeight.toDouble(),
+                  min: 120.0,
+                  max: 220.0,
+                  activeColor: Colors.deepOrange,
+                  inactiveColor: Colors.green,
+                  onChanged: (double newValue){
+                    setState(() {
+                      SliderHeight=newValue.round();
+
+                    });
+                  },
+                ),
+
               ],
             ),
           ),
