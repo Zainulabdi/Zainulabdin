@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'IconTextFile.dart';
+import 'ContainerFile.dart';
+const activeColor = Colors.blueAccent;
+const deActiveColor = Color(0xFF111328);
+enum Gender{
+  male,
+  female,
+}
 
 class InputPage extends StatefulWidget {
   @override
@@ -7,6 +15,18 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleColor = deActiveColor;
+  Color feMalecolor = deActiveColor;
+  void updateColor(Gender gendertype) {
+    if (gendertype == Gender.male){
+      maleColor = activeColor;
+      feMalecolor = deActiveColor;
+    }
+    if (gendertype == Gender.female){
+      feMalecolor= activeColor;
+      maleColor = deActiveColor;
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,19 +37,35 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(child: Row(
             children: [
-              Expanded(child:new RepeatContainerCode(
-                colors: Colors.blueAccent,
-                cardwidget: RepeatTextandICONeWidget(
-                  iconData: FontAwesomeIcons.male,
-                  label: 'MALE',
+              Expanded(child:GestureDetector(
+                onTap: ()
+                {
+                  setState(() {
+                    updateColor(Gender.male);
+                  });
+                },
+                child: RepeatContainerCode(
+                  colors: maleColor,
+                  cardwidget: RepeatTextandICONeWidget(
+                    iconData: FontAwesomeIcons.male,
+                    label: 'MALE',
+                  ),
                 ),
               ),
               ),
-              Expanded(child: new RepeatContainerCode(
-                colors: Colors.blueAccent,
-                cardwidget: RepeatTextandICONeWidget(
-                  iconData: FontAwesomeIcons.female,
-                  label: 'FEMALE',
+              Expanded(child: GestureDetector(
+                onTap: ()
+                {
+                  setState(() {
+                    updateColor(Gender.female);
+                  });
+                },
+                child: RepeatContainerCode(
+                  colors: feMalecolor,
+                  cardwidget: RepeatTextandICONeWidget(
+                    iconData: FontAwesomeIcons.female,
+                    label: 'FEMALE',
+                  ),
                 ),
               ),
               ),
@@ -51,48 +87,6 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class RepeatTextandICONeWidget extends StatelessWidget {
-  RepeatTextandICONeWidget({@required this.iconData,this.label});
- final IconData iconData;
- final String label;
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          iconData,
-          size: 80.0,
-        ),
-        SizedBox(
-          height: 15.0,
 
-       ),
-        Text( label,style: TextStyle(
-          fontSize: 18.0,
-          color: Colors.black
-        ),
-        )
-      ],
 
-    );
-  }
-}
-
-class RepeatContainerCode extends StatelessWidget {
-  RepeatContainerCode({@ required this.colors,this.cardwidget});
-final Color colors;
-final Widget cardwidget;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15.0),
-      child: cardwidget,
-      decoration: BoxDecoration(
-        color: colors ,
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-    );
-  }
-}
