@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'IconTextFile.dart';
 import 'ContainerFile.dart';
 import 'constantfile.dart';
-
+import 'resultfile.dart';
 
 enum Gender{
   male,
@@ -159,7 +159,8 @@ class _InputPageState extends State<InputPage> {
             ),
     ),
     ),
-              Expanded(child:new RepeatContainerCode(
+
+      Expanded(child:new RepeatContainerCode(
               colors: Colors.blue,
                 cardwidget: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -201,6 +202,22 @@ class _InputPageState extends State<InputPage> {
     ],
     ),
     ),
+          GestureDetector(
+            onTap:(){
+           Navigator.push(context, MaterialPageRoute(builder:(context)=>ResultScreen()));
+    },
+            child: Container(
+              child:  Center(
+                child: Text(
+                  'calculate',
+                  style:kLargeButtonstyele,),
+              ),
+              color: Color(0xFFEB1555),
+              margin: EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: 80.0,
+            ),
+          ),
   ],
     ),
 );
