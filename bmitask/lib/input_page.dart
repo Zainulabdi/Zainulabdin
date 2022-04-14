@@ -19,20 +19,24 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectGender;
   int SliderHeight=180;
-  int SliderWeight=60;
-  int sliderAge=20;
-  // Color maleColor = deActiveColor;
- // Color feMalecolor = deActiveColor;
-  //void updateColor(Gender gendertype) {
-  //  if (gendertype == Gender.male){
-  //    maleColor = activeColor;
-  //    feMalecolor = deActiveColor;
-  //  }
-  //  if (gendertype == Gender.female){
-   //   feMalecolor= activeColor;
-   //   maleColor = deActiveColor;
-  //  }
- // }
+  int SliderWeight=5;
+  int sliderAge=5;
+  int min=0;
+  int max=100;
+   Color maleColor = deActiveColor;
+  Color feMalecolor = deActiveColor;
+  void updateColor(Gender gendertype) {
+  if (gendertype == Gender.male)
+  {
+    maleColor = activeColor;
+     feMalecolor = deActiveColor;
+   }
+  if (gendertype == Gender.female)
+  {
+    feMalecolor= activeColor;
+     maleColor = deActiveColor;
+   }
+  }
 
 
   @override
@@ -48,7 +52,9 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: RepeatContainerCode(
-                  onPressed: (){
+                  onPressed: (
+
+                      ){
                     setState(() {
                       selectGender=Gender.male;
                     });
@@ -56,7 +62,7 @@ class _InputPageState extends State<InputPage> {
                   colors: selectGender==Gender.male?activeColor:deActiveColor,
                   cardwidget: RepeatTextandICONeWidget(
                     iconData: FontAwesomeIcons.male,
-                    label: 'MALE',
+                    label: '1 To 50',
                   ),
                 ),
 
@@ -66,12 +72,13 @@ class _InputPageState extends State<InputPage> {
                   onPressed: (){
                     setState(() {
                       selectGender=Gender.female;
+
                     });
                   },
                   colors: selectGender==Gender.female?activeColor:deActiveColor,
                   cardwidget: RepeatTextandICONeWidget(
                     iconData: FontAwesomeIcons.female,
-                    label: 'FEMALE',
+                    label: '1 To 100',
                   ),
                 ),
               ),
@@ -81,7 +88,7 @@ class _InputPageState extends State<InputPage> {
             cardwidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('HEIGHT',style: kLabelStyle,
+                Text('User value',style: kLabelStyle,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -91,19 +98,11 @@ class _InputPageState extends State<InputPage> {
                       style: kNumberstyle,
 
                     ),
-                    Text(
-                      'cm',
-                      style: kLabelStyle,
-                    ),
-
-
-
                   ],
                 ),
                 Slider(
                   value: SliderHeight.toDouble(),
-                  min: 120.0,
-                  max: 220.0,
+                  max:
                   activeColor: Colors.deepOrange,
                   inactiveColor: Colors.green,
                   onChanged: (double newValue){
@@ -126,7 +125,7 @@ class _InputPageState extends State<InputPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text (
-            'WEIGHT',
+            'Addition',
             style: kLabelStyle,
           ),
           Text(
@@ -166,7 +165,7 @@ class _InputPageState extends State<InputPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text (
-                      'AGE',
+                      'Power',
                       style: kLabelStyle,
                     ),
                     Text(
