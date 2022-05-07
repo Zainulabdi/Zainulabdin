@@ -26,7 +26,16 @@ class _InputPageState extends State<InputPage> {
         title: Text('Tasbeeh'),
       ),
       body: Center(
-
+          child: RaisedButton(
+            color: Colors.pinkAccent,
+            child: const Text(
+              "Raised Button Example",
+              style: TextStyle(color: Colors.white),
+            ),
+            onPressed: () {
+              debugPrint("Button clicked!");
+            },
+          ),
       ),
 
     );
