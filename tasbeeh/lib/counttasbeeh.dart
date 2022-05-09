@@ -142,32 +142,31 @@ class counttasbeeh extends StatelessWidget {
                       radius: 60,
                     ), //CircleAvatar
                   ), //CircleAvatar
+                  Text(
+                      ' SUBHAMALLAH'
+                  ),
+                  Text(
+                      ' (all) praise be to God'
+                  ),
+                  Text(
+                      ' Length=33'
+                  ),//CircleAvatar
                   SizedBox(
                     height: 10,
                   ), //SizedBox
                   SizedBox(
                     width: 80,
-
+                    child:  ElevatedButton(
+                      child: const Text('count Tasbeeh'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                        );
+                      },
+                    ), //RaisedButton
                   ),
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          padding: const EdgeInsets.all(90),
-                          child: ElevatedButton(
-                            child: const Text('View All Tasbeeh'),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  ),//SizedBox
+//SizedBox
                 ]
               ), //Column
             ), //Padding
