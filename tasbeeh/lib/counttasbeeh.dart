@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'viewalltasbeeh.dart';
+import 'allahhuakber.dart';
 
 class counttasbeeh extends StatelessWidget {
   const counttasbeeh({key}) : super(key: key);
