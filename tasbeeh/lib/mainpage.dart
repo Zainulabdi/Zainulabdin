@@ -26,12 +26,12 @@ class FirstRoute extends StatelessWidget {
       children: [
         Expanded(
           child: Card(
-            elevation: 50,
+            elevation: 60,
             shadowColor: Colors.black,
             color: Colors.greenAccent[100],
             child: SizedBox(
               width: 300,
-              height: 500,
+              height: 600,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
