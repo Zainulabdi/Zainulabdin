@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tasbeeh/createtasbeh.dart';
 import 'package:tasbeeh/counttasbeeh.dart';
 import 'package:tasbeeh/viewalltasbeeh.dart';
-import 'package:tasbeeh/function.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -75,7 +74,7 @@ class FirstRoute extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                            MaterialPageRoute(builder: (context) => const counttasbeeh()),
                           );
                         },
                       ), //RaisedButton

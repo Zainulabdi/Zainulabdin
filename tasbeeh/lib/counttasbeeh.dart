@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'function.dart';
 import 'viewalltasbeeh.dart';
 
 class counttasbeeh extends StatelessWidget {
@@ -80,14 +79,23 @@ class counttasbeeh extends StatelessWidget {
                           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAADnCAMAAABPJ7iaAAABCFBMVEX///8AAAARdq77+/v5+fnS3+sAbKn29vbz8/MTExPn5+fKysq9vb2enp7u7u6ioqLg4ODZ2dnR0dEoKCiqqqq0tLRDQ0PExMSMjIyYmJjc3NyBgYFYWFhLS0sAcay4uLh4eHg2NjYhISEvLy9gYGALCwttbW18fHwbGxs7OztOTk6RkZFycnJbW1sdHR3i7vEAcrIhfLFXlbx9qssAcqKXvNM5hLJboMPG3+hUlrGryd5al8VHirWMs9Nhnr1onsY2gLhFjcEAX6HO5eqkyNWiwNRpor+71eW62NuArNCuzuI3hK1ip8CpytV9tNGOv9UAaZ4AW7UAYrMAVpigyeaCt8i/1Osge6edzF7ZAAAS80lEQVR4nO1diX/aSLJWIwxC4kZcBnEfBh8YCMQT23EmtkPWmdi7+zab//8/eX1KrQPcKBLOm6dvfhMb0Wqq1NVfVVcXbUmKECFChAgRIkSIECHC/2/IcuA9Bt2h3x7j8WDFkOR40LrJyb17hAMmy4GqJqNHFaRqyKbk/XuUlaQUqBxSXIn7kGMXkoq/h5+MixiPLD4boeUItBZps1+PHvcJPGGZCCPYoUCP8r49+tFMZMxk2rlY9wLzTKbiCsrrc+YKPA8Zm6OoTQhZI2EGwYfl0xpF5xn+X0QS2OPrbST6qAQ180PfcFaI3MYEERBFyHaYGUgiH+7XGoXuksVVE2N9OmpxSeQx+GIQ0buY8QjwjeATFu9RyDO5+xc2YpNHXhdETA5KSq/36M/37zHSuGGgtkMJ8jXE/VijvGfoIsaN+8gh0DbuIyTGvLP/Ta/0GHCs7zMQDTh+DalHf6vIwAdNhMj3Q/BLvggRIkSIECFChAgRIkSIECFChAgRIvyfQPClM79LstFXEv7APfqQIY72w4J8yHJc2mOvPkTEk3KwNTxSMim44ewHwlvlqG1SRI49exQrnfGzycb9+3pj4UqX4HvcWzeZdi5c6fJqh3vVzoiVGcl+Sn3oXrKgJOKVLqL1XOKVXHsrJ4tvvwvWpexTOyNUJLBf7YztvmArXZgVCPWIOERERPHaGed9wqoJGS0ZL8HaGUERcZ/+VBMwSDeDeN+BJVG13YKkFQlXugjKGBesnXFLIgtsGTMqU61L9ZLm3aOUAUZz51SbTu0FwdNdjWXTJPeE2E2ohhT9bICmeS0HgO7ZuF0xTsCx51uZAvpXAaDMVwUdg85uEf0ohu98vQV7xGkAgDluGfii4NUc9KQRKHq8oRkAf1gbgD4/c2tbOuIEeF3E11p4w5RiArUxZZbrAEw9WifhmKSB6rpe7QKQwb+NwCR1yr1zAsDEn2QmfKomy9ncaR7+kgfHOshab2jAQwNJuoAPgG+GUS4B0GuT30F/2OUaFEBqCNq+RDPhN2ZXUsT2MgOp2ODfaHhKlK0g3ercFTkzBMAwWQeA7gnomO/qAKRAyp9o5if4VK2NRIUmU3FOoDw49bzh1DZsKpxLYMTNphHqzxrwIkC6eVNS2KhiUQoScL0Dap43nHWPzadQGMB7Gzb7LOP+xuZraKvD1DAwcfcCFqWhVtxveI5a2uKa9BTemXH45izuDyjsdR1qhvzBW0A9axTboO0eIpD2aF0wnR8anq7HdOwPkWpmd0WAJnM/IGF9IAWqzktZ68lbKJrTaAxA0x6xHOfxjwbWxbRvmYyiq/uDYexm+vyZuxn0dnQoVTDIO940yI8ywLqZ44kp1dNJHgZtN4sQyuVjqmoPDBkXpl2kd0YHpgAV6YyBwa434Otzbyd5EGTdLAJ9EooITZHSfbs/c+CYxRxxqMoZjK+YOaM5mdZ23XpYVCGh16aIDylNVi9AT9/lOg3Tt8GYCw5ZjVkkGkVdKv+i2w4MCrLPTgrJ1cUX2kbdO9xnKHTNX0cciSCQ6OVt6N+NEZJNR6E88OJJDwyg9VKHh1YNvLPrIwP9XXAMly4oQIbzbAA816ROyCgMpSyI4huePeEoNj1vegvU6kg1FRF9RiyQQAsdtUR+VwGweXvoMU6Cl1Ec+WJR06rpNBkjHRmkCkboNxe1OZc0CHXIFAM2No6lQdox9w4MEq+j0Am/zIEkZu1jSOIZZ9tMw3U7WksDs6UBwIB7L+8w0MOChOsoiqjR12MpO+xBXzt0h0i6R9zc5kPiDntCBPIbxVmEyvpg3Gg0aqUUfbwFrKbSRAK7nFkZeATOuUrT9A46vJm/Cz6iXNByv44CmVtkrOB879Dr58S+cqOOO0Aqv2ZgGpczipextY93tQ8HXHylTvgETTrnlbbCQKqVdnWKlmyMV89VvC73iuPCxciaAygvIOZ+8MTs7GphrdeqyFlDiuz5FNA3NHO2V+HUGu7yYJzj1l5dgFUAC/xP0JzLw7nn5THCBEsDqwbod3aT2ITzVGQFlmQv0znnfITrGBINZ/DSRx4Cz6xsiMgwA1QUz82HLOfShlzApWLVRvTVCLgYU2dJLxrud4dcTusXk5IueKXy5Fcy1lLGWoioYMjZFAqAe1RXjWbEeKBr6F29QSwZam+6+fLWxJ3f9LfHsNQRze1i8ZLF8cglcyw3BL0KZckBVs2e1lEA2Q3pQSNH79TNuScltyaA/JwSI205JQaz2A5WLnChYJ3PGctSO9Xr9jGTwFBDzQHnXBpiT4bja+S8q1YUOfCa0kGfEqPhB7sj+Tnm/FybywnHFVmawsAF+4oCekDZlCPcMHCoVYbzsYx0ypv3FruSB4I+JaaBVDtmT5NsnWp8xN7lMuAk5UZoB1kOUTXLMq5Fx/pgjIcpZ95D5x7kFe8dyYBPiamg8HxARo3UpUBZOlyDMz7lRqYUNjv81fMLGurrmEFGjvVBDlSmcAHXY/6vS3ci294Lt6BPiekhliNhAql0QVOCX6/k+KADhSDaCSZ8XK2g0xVQGgyS6sBJ/5rRHMIr1WaJhAEjmkPYsq8R9CkxA9M70Z38fN+w7WBofKyIfFlOQmZHbYdOviJd5yVtfWcr4KTMsXmG8CvedCy7SDnwU2IKWKS8ZO4nn4Fz20osC/gACbYd0h7xaxRzokEgmjlXp72LZo0rfaAL7Qr6x3BOtxBOiVFr4CRPO4dPOF3pTe1T5mIIrBikSWaeaTsKTXdjQnFkrGTJmEwGXDkIWWhnsfurOFQL55QYuvQgtUldoz+153gGXFIAj1Kf7/GMrlMLdd0ZQ8pSp2cMJO6UGByMVdG4Jx0uMJxTYvLU2WBz1ECz17Rn5k65SJFsMVa5feXCrvhfB/1Tiat0KQFo65B6TssT+yLA3ykxrxqxDlg7KMWgkumX7LFg2hZBESfFyWF4zDEGzRjqfAkeHOJzmoGxOe2wTokZnbOmsqRUJhJw1BagGWKl2QagVLGNatpztU0+87hrqPxjyKCmWddCL7RTYng+zEFqB858IaNQjOowNekbzret/fhRZVJKUVcA1wl2pZE5K9gZ8hFZaKfEZHnSqEDP5MryGoCjSKnfB/Z8Tw5Y5U454IA9qMxCPwLpI1vkdhBCPCVG48RWYNSluJIjDU5EGoDwkysJzFxqgQ2WCcfGzom76CvEU2IyHGmk4QiqHB8SIGXMNFscaWKvbhmbJlyhqg3Jbi/CuMpHKIY7YRfiKTE1bhO2AQkkD5yVIiiK4mYXXrTxHHrMImYWbkHdUtzIpUb19rFCP+yQVQgDjg+7QzzVHTaj2ocJr2xs8UofECpqmNqcpIATKaOh59sujgoTUyumRVMNuR1Hug6zNecP6sC+UYGcOh6LkksfJ9BkzBcKhbyatUfSoaBiSV3FWXCXajh1xWeghg4SLVLVj6HQhaJWbeuZ2sAY2pQa4nFETyndMS+GXLRlWEzeQI701KUa5j2eNZFZ8Q89CTnRIzGrFPVOyaYZ0DqViZ5mmnlXfwWHphWo9hCjNFwbKhksB+/KDEfAAvlwIHkjWx1bmoFmWc/V2S7etvAsMAzMB67iKT52ZfL7AD17vlAn76htQa5su5s5ngA3qxxAMzhK7DN0HBbVwNC+6wB5pYqKULmUTtGuGuZMryo1+LhyaIXnpdkByhHqZpxnYF+dcxgfio5xrGXFmnlgN8giaLr8PIJa73LzzI5DVGulWYCYJdlTtObgJg5So0IXIqTENZ5Bw8B30QCIRJ0Wma7Q8bJplip1J5NKJWwGwVDZ2qlBjKpgY2UcMY5Z7gOkmiMSTNljfwN5bfsGRS7FmJH80u3U01o+KVer1Vf2GAJEj/AGevBoAiUJL+PATiN6tBvVjMOe+GikDVl8bDcxnW970uHSV6lDVsagigijradorgpX+qPJcNakIwU06B8c84WfaiU42rZvPhxzYcmobE+ZnB+yKDJvikGmmGPNlQLNNlw/FmwX+QS4jmgH1Qiy+WO65JOae6twfNAd7XMmCpktil2zIcifoeHUuIu8f0YGLJEsHiESFv/XPOfUKRgeMPY3h40unOp2zeoSIXbVYBdtYX+TTJ62OZYoxQ+a25JckGsvQtPEDcoRZnxV4awROvQss7/C6WBidMq2+sEcVQm7bRRYovyHqyDZQhp4lNeECJzetnxukuk2xG5A2xJpIGDrw1kCFM+jFfQIpFyWWB6Nq9wNYX3/3BNqJmOb8foJVq1fR+OQ2144gJdyhPGwWWvIAzpXYhpmV6pw/tCquZGvpjXK8I2t5R7xHjJZOkjYV2QV1xfV4JUKMgBipNkDG6SFbN6txrlrHBgmPF1i99BrA+f6RkWhzYjZu/JWFZ+IFAxn5bSxzYKIczdZpcnIx836ZXPlpPz6d/T8gbhrB2uUvEdNJppZSQDTibjy5EUrUlE81wgHgAawvHbuTnmqppBoig8Ia0w3h/AqHFk2v5Sd34AIEZmOCho9KBqRhDBjyuvrIsdUC5uT6zFvaF9B9/NWpYsCxIrPA0ezBp1Y9qJHBDklo3fiIQyt5eXcQnFapIFmCthzxHqDO3dGeSuCHMIIr1mnqck8tauJq6ZaZpkbK4+lYebLALbyNKzhrGhcgl6xL/V+FeKHQpSHw17qZEh4oEvtsOmUBsZSpT4qGbG2r3BMreJYBDjVBgPiULJnWdTQc6r5OyRmr1NidDBoTpuYvdMsMdOwJ3nyTVAZDM4HTd7qJsw6rfgT9Kly/VQK3UAGP+lZyBf+KTHJMWd7ZgxS5nmwOICR1XkJR2HWjRXTn8l9SzfQwR9fTXHDKHuRSOinxBTPwEXRfHTpJvtGnoqWo4hRksVTxIHdQarXHFQsFlRSI7yVgV8kOd3QsML+srnxWW17iB3uKTFyMTOFYUJask7aMKAvpoOFre2kwtICUwMMunAJxB6WhtfXhQy1WurK6ai97Skx2hiNxUDP8vUgWVzFSH5vAxumldIUvUt6lM9cufsBa3n21qfE5KtagcQb3P5wGgqcZtnGrk01Ywo6KnvKuteuRMZU7fc5JcZqUkZLERbD522qXTTLEn3G6RJwf5EI3UAmXENQ2EOdEkOFQ6KZbGbLZ2XYyUX6BdgaNpUZjQiJeJhTYhhyts2oLJs/RlkmPjKPt3cb2zc39elw286Uh4gHOCVmK1S91sikqa9Tcmj6NfXt3yBFH3m8RyAc4ikxe5m5Wqvr2u7v2YXwZ4h8nhLz2/w9pO3wK2HwJ1MG/xeW3mYxFCFChAgRIkSIECFChAgRIkSIECFChP0QfCov+NxggKfE/BKC/8pgkKfE+Bdi59kKfjoM+JQY34gr8YB3CoI+JcaOPXbKxc502WfvPR7wKTG2NkSY4Hrcr9Il6FNi+K73+XtIIqdo0NkoKm/Qp8TwgtDdfKH+xf/CkvAfjwr6lBhb18J/DymESpcQTonhOw/2LyztVekSzikxTBJx1cRYn45aXGSDNJxTYnhJxOpSRP2ZeI8hnRJjtROsChLhJNKjJNhjWKfEWE1xNdkb9BjaKTG29iJd7hPAisgc2ikxe/cYeIFJaKfEvH2PoZ0Ss2+PgS/QwjslJkKECBEiRIgQIUKECBEiRIgQIUKEN8bR3xZS4m8LKQbRSsznrVbsbwakWmIxk6T4Eus2f+fZDL7Xend5SMF+HVC11kJaxdbvpS9I/sRVDI0fUhP9aOHBbLX+uGytr1ox/JJeYo0OONrWh4l8LFQtMftwDelknUz8vFwsr1o3y9bH21jsbhVrXd9+vE28i63Ws9Wy9f7ybrlcJlrLZesydvu+tV7N5zfP6+d1uPpArG9uLm8+3fy5+PNuvYjB/27eXy9i63Xr2+Un/LgvF/D/y9jiMtFCz3+9ZqpJ35LXnzerq5vLn7M/rlr3Hxf3s+Xi6OG/7+4/zDbPicen2Oz5S+xoPttcHS2WG3nR2nydfZQfk3fJTfz7LBGyZq3Hh5dPf6yelld3/1g9PT29/zp/+PYYe/7r0/fn1cvzavXlefVj+bz8a/PlZfnw8uXHx/+0mGo3s3/Obu43N4m7x38dJe4Tqx8fPj++//f9fDPfXH/4vPmWuP+fp9jV9erj7fPyafly+TkZ+3x39C/lefPn7DIZumqr/zz+/LT68vLl5SXx9W7z1/fF8937d8/P84ePm4fN7err7Yerf2x+PKy+P2web78+rJ6ZavdHi6OX26f7Vmw+u79KHP1zPXtarZW7+5//XW+uH3/MYomr+03saPF4t7pdLmYf1qvvR8oivpktjxazuRz6bHsXm7cQw/2Ev89bP1tzrPD8J5pxc/wGvDSfo2vvIN3Nf+IGiCFvpKPlh/hHSJGt+eIy9q0VW98tLr9Bi1231vP1DWx4ia7H1vM5NPD19fz68u6m9e1u/mkxX8TuwtaMUgbW7h3Uk1EIuhCb2xvFLIpBql3On44eKOu3+Bu5X1oxOycxpjwsRe4F7LIh5/+u8v0CpLcWIDz8L+NOPm5FdD8wAAAAAElFTkSuQmCC"), //NetworkImage
                       radius: 60,
                     ), //CircleAvatar
-                  ), //CircleAvatar
+                  ),
+                  Text(
+                      ' Alhamdulillah'
+                  ),
+                  Text(
+                      ' Alhamdulillah is an Arabic phrase meaning "praise be to God",'
+                  ),
+                  Text(
+                      ' Length=33'
+                  ),//CircleAvatar
                   SizedBox(
                     height: 10,
                   ), //SizedBox
                   SizedBox(
                     width: 80,
                     child:  ElevatedButton(
-                      child: const Text('View All Tasbeeh'),
+                      child: const Text('count Tasbeeh'),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -95,7 +103,7 @@ class counttasbeeh extends StatelessWidget {
                         );
                       },
                     ), //RaisedButton
-                  ) //SizedBox
+                  ), //SizedBox
                 ],
               ), //Column
             ), //Padding
@@ -106,6 +114,7 @@ class counttasbeeh extends StatelessWidget {
     ),
 
     ),
+
       Expanded(
         child: Card(
           elevation: 50,
