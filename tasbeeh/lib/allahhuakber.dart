@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'mainpage.dart';
-import 'counttasbeeh.dart';
 
-class viewalltasbeeh extends StatelessWidget {
-  const viewalltasbeeh({key}) : super(key: key);
+
+class allahhuakber extends StatelessWidget {
+  const allahhuakber({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

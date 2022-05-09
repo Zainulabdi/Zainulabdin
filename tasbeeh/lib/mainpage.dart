@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tasbeeh/createtasbeh.dart';
+
 import 'package:tasbeeh/counttasbeeh.dart';
-import 'package:tasbeeh/viewalltasbeeh.dart';
+
 
 void main() {
   runApp(const MaterialApp(

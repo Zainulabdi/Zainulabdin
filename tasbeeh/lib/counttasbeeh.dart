@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'allahhuakber.dart';
-
+import 'subhanallah.dart';
+import 'viewalltasbeeh.dart';
 class counttasbeeh extends StatelessWidget {
   const counttasbeeh({key}) : super(key: key);
   @override
@@ -53,7 +54,7 @@ class counttasbeeh extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                        MaterialPageRoute(builder: (context) => const allahhuakber()),
                       );
                     },
                   ), //RaisedButton
@@ -161,7 +162,7 @@ class counttasbeeh extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                          MaterialPageRoute(builder: (context) => const subhanallah()),
                         );
                       },
                     ), //RaisedButton
