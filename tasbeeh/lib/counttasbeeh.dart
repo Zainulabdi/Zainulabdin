@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'function.dart';
+import 'viewalltasbeeh.dart';
 
 class counttasbeeh extends StatelessWidget {
   const counttasbeeh({key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,18 +86,14 @@ class counttasbeeh extends StatelessWidget {
                   ), //SizedBox
                   SizedBox(
                     width: 80,
-                    child: RaisedButton(
-                      onPressed: () => null,
-                      color: Colors.green,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Row(
-                          children: [
-                            Icon(Icons.touch_app),
-                            Text('+1'),
-                          ],
-                        ), //Row
-                      ), //Padding
+                    child:  ElevatedButton(
+                      child: const Text('View All Tasbeeh'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                        );
+                      },
                     ), //RaisedButton
                   ) //SizedBox
                 ],
@@ -136,21 +132,28 @@ class counttasbeeh extends StatelessWidget {
                   ), //SizedBox
                   SizedBox(
                     width: 80,
-                    child: RaisedButton(
-                      onPressed: () => null,
-                      color: Colors.green,
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Row(
-                          children: [
-                            Icon(Icons.touch_app),
-                            Text('+1'),
-                          ],
-                        ), //Row
-                      ), //Padding
-                    ), //RaisedButton
-                  ) //SizedBox
-                ],
+
+                  ),
+                  Expanded(child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          padding: const EdgeInsets.all(90),
+                          child: ElevatedButton(
+                            child: const Text('View All Tasbeeh'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  ),//SizedBox
+                ]
               ), //Column
             ), //Padding
           ), //SizedBox
