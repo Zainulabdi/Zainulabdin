@@ -20,7 +20,7 @@ class counttasbeeh extends StatelessWidget {
         color: Colors.greenAccent[100],
         child: SizedBox(
           width: 200,
-          height: 300,
+          height: 310,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -34,25 +34,31 @@ class counttasbeeh extends StatelessWidget {
                     radius: 60,
                   ), //CircleAvatar
                 ), //CircleAvatar
+                Text(
+                    ' Allah Hu Akber'
+                ),
+                Text(
+                    ' the words “Allahu Akbar” simply mean “God is greater.” ",'
+                ),
+                Text(
+                    ' Length=34'
+                ),//CircleAvatar
                 SizedBox(
                   height: 10,
                 ), //SizedBox
                 SizedBox(
                   width: 80,
-                  child: RaisedButton(
-                    onPressed: () => null,
-                    color: Colors.green,
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.touch_app),
-                          Text('+1'),
-                        ],
-                      ), //Row
-                    ), //Padding
+                  child:  ElevatedButton(
+                    child: const Text('count Tasbeeh'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const viewalltasbeeh()),
+                      );
+                    },
                   ), //RaisedButton
-                ) //SizedBox
+                ),
+
               ],
             ), //Column
           ), //Padding
