@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tasbeeh.iml" filepath="$PROJECT_DIR$/tasbeeh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/tasbeeh_android.iml" filepath="$PROJECT_DIR$/android/tasbeeh_android.iml" />
+    </modules>
+  </component>
+</project>
