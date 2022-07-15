@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'Managersignup.dart';
-class counttasbeeh extends StatelessWidget {
-  const counttasbeeh({key}) : super(key: key);
+import 'package:tasbeeh/Managersignup.dart';
+import 'mainpannel.dart';
+class managerlogin extends StatelessWidget {
+  const managerlogin({key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +73,7 @@ class counttasbeeh extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Managersignup()),
+                        MaterialPageRoute(builder: (context) => mainpannel()),
                       );
                     },
                   ), //RaisedButton

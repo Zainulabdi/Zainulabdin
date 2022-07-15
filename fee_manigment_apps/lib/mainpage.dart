@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tasbeeh/managerlogin.dart';
+import 'managerlogin.dart';
+
 void main() {
   runApp(const MaterialApp(
     title: 'Navigation Basics',
@@ -56,7 +57,7 @@ class FirstRoute extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const counttasbeeh()),
+                            MaterialPageRoute(builder: (context) => const managerlogin()),
                           );
                         },
                       ), //RaisedButton
@@ -71,7 +72,7 @@ class FirstRoute extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const counttasbeeh()),
+                            MaterialPageRoute(builder: (context) => const managerlogin()),
                           );
                         },
                       ), //RaisedButton
@@ -86,7 +87,7 @@ class FirstRoute extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const counttasbeeh()),
+                            MaterialPageRoute(builder: (context) => const managerlogin()),
                           );
                         },
                       ), //RaisedButton
